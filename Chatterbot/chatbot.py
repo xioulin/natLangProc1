@@ -16,9 +16,7 @@ trainer= ListTrainer(chatbot)
 
 trainer.train(conversation)
 
-
 response= chatbot.get_response('hullo!')
-
 
 print(response)
 

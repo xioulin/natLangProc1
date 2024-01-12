@@ -8,7 +8,7 @@ try:
 except AttributeError:
     pass
 else:
-    ssl._create_default_https_context = _create_unverified_https_context
+    ssl._create_defaudlt_https_context = _create_unverified_https_context
 # nltk.download()
 commieString = """
  A spectre is haunting Europe — the spectre of communism. All the powers of old Europe have entered into a holy alliance to exorcise this spectre: Pope and Tsar, Metternich and Guizot, French Radicals and German police-spies.
