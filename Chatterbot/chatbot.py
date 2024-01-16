@@ -11,13 +11,9 @@ conversation= [
     'morning to ye, shipmates, morning',
     'the ineffable heavens bless thee'
 ]
-
 trainer= ListTrainer(chatbot)
-
 trainer.train(conversation)
-
 response= chatbot.get_response('hullo!')
-
 print(response)
 
 
