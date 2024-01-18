@@ -1,13 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
 
-r = requests.get('https://www.nationalreview.com/2024/01/abortion-is-a-convenient-scapegoat-for-magas-political-weaknesses/')
 
+url='https://www.lifesitenews.com/blogs/canadas-military-stigmatized-straight-white-dudes-now-it-has-a-recruitment-crisis/'
+r= requests.get(url)
 
 soup= BeautifulSoup(r.content, 'html.parser')
-s= soup.find('article',id="post-1588392")
 
-print(s)
+s=soup.find(id='primary')
+lines= s.find_all('p')
+# print(lines)
+# print(lines[:25])
+lines_list= list(lines)
+# print(lines_list)
+print(lines_list)
 # content=s.find_all('p')
 # print(content)
 

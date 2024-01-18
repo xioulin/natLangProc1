@@ -28,6 +28,7 @@ def filterStopWordsList(list):
 
 
 def filterStopandPunctList(list):
+    from nltk.corpus import stopwords
     stop_words = stopwords.words('english')
     punctuationList = ["\'","\"",",",".","!","?",";",":",'”','$', '(', ')', '*','“','’','‘','_']
     stop_words= stop_words+punctuationList
@@ -38,6 +39,7 @@ def filterStopandPunctList(list):
     return filteredList
 
 def filterPunct_Num_Contractions(list):
+    from nltk.corpus import stopwords
     newList = [i for i in list if i[0].isalpha() and '.' not in i]
     punctuationAndContractionList = ["\'", "\"", ",", ".", "!", "?", ";", ":", '”', '$', '(', ')', '*', '“', '’', '‘', 't', 'à', 'd', 'l', 's', 'C', 'm','S','o','Y','ve','re','ll','O','n','ed']
     filteredList = []
