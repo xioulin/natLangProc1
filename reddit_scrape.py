@@ -8,24 +8,31 @@ reddit=praw.Reddit(
     redirect_uri='https://localhost:8081'
 )
 
-subreddit= reddit.subreddit('Catholicism')
+subreddit= reddit.subreddit('ManchesterUnited')
 
 
-top_posts= subreddit.top(limit=5)
-new_posts= subreddit.new(limit=5)
-
-for posts in top_posts:
-    print(posts.title)
+# top_posts= subreddit.top(limit=10)
+new_posts= subreddit.new(limit=10)
+# hot_posts=subreddit.hot(limit=10)
 
 
-post= reddit.submission(id='h0qb82')
-print(post.title)
+# for posts in new_posts:
+#     print("Title",posts.title)
+#     print("id", posts.id)
+#     print('score',posts.score)
+#     print('num_comments',posts.num_comments)
+#     print('\n')
+
+
+
+post= reddit.submission(id='199t2pp')
 comments= post.comments
 
-for comment in comments[:2]:
-    print(comment.body)
+import csv
+with open('ten_hag.csv','w',newline='') as csvfile:
+    filewriter= csv.writer(csvfile,delimiter=' ',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    filewriter.writerow(['author', 'comment'])
+    for comment in comments:
+        filewriter.writerow([comment.author,comment.body])
 
-# print(reddit.auth.url(scopes=['identity'],state="...d",duration="permanent"))
-# code='TCqYNX0uK-SkQO_loAdEaok0kcq0YQ#_'
-# print(reddit.auth.authorize(code))
-# print(reddit.user.me())
+
