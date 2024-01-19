@@ -1,7 +1,5 @@
 import praw
-from DOTENV import config
-
-
+import config
 
 reddit=praw.Reddit(
     config.client_id,
