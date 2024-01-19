@@ -1,12 +1,11 @@
 import praw
-from dotenv import load_dotenv
-import os
-def configure():
-    load_dotenv()
+from DOTENV import config
+
 
 
 reddit=praw.Reddit(
-
+    config.client_id,
+    config.client_secret,
     user_agent="testscript by u/Steelkilt",
     redirect_uri='https://localhost:8081'
 )
