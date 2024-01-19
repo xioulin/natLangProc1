@@ -1,9 +1,9 @@
 import praw
-import config
+import klucze
 
 reddit=praw.Reddit(
-    config.client_id,
-    config.client_secret,
+    client_id=klucze.client_id,
+    client_secret=klucze.client_secret,
     user_agent="testscript by u/Steelkilt",
     redirect_uri='https://localhost:8081'
 )
