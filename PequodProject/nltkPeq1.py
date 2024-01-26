@@ -1,9 +1,21 @@
+import ssl
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
 import nltk
 from nltk import word_tokenize, sent_tokenize
 from nltk.probability import FreqDist
+from nltk.corpus import wordnet as wn
+nltk.download('wordnet')
 
 mobyDick = open('/Users/pkc/PycharmProjects/natLangProc1/NLTKbook/mobyDick.txt','r')
 mobyDickString = mobyDick.read()
+
+
 wTokeMobD = word_tokenize(mobyDickString)
 
 mobyDickText = nltk.Text(wTokeMobD)
@@ -11,7 +23,7 @@ mobyDickText = nltk.Text(wTokeMobD)
 fMDdist = FreqDist(mobyDickText)
 
 
-from nltk.corpus import wordnet as wn
+
 
 synHarpoon= wn.synsets('harpoon')
 
@@ -31,12 +43,6 @@ print(cetacean.hypernyms())
 print(cetacean.hypernym_paths())
 
 print(cetacean.member_holonyms())
-
-
-
-# print(shipNoun)
-# print(shipNoun.hyponyms())
-# print(shipNoun.hypernym_paths())
 
 
 

@@ -1,22 +1,12 @@
-How to work on Chat Bot
 
 
+Steps to take:
 
-The sun also rises chatbot?
-There is a lot of dialogue, in theory I could try to break it down and assign dialogue lines to characters
-
-The issue is the copyright. I really, really do not want to infringe on anyone's copyright. Working on contemporary
-or recently generated data runs into so many potential not just legal, but ethical issues. I feel far more comfortable
-working on something that's basically 100 years old or more, even though it's harder to make sense of, given the time gap
-and all the cultural changes since then.
-
-Characters:
-
--Narrator, aka Jake
--Robert Cohn
--Lady Ashley, first name Brett
-- Frances
-
+1. Extract dialogue from TSAR, basically done
+2. Assign dialogue to speaker (????)
+3. Dialogue stored as panda dataframe
+4. Write dataframe into sql3lite database, to use to train the chatbot
+5. Work on Hemingway Chatbot.
 
 
 
