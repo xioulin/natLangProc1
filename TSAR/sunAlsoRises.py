@@ -12,7 +12,7 @@ from statistics import mean,stdev,variance,median
 #     ssl._create_default_https_context = _create_unverified_https_context
 # response = request.urlopen(url)
 # raw=response.read().decode('utf8')
-hemingwayFile = open(r'/Users/pkc/PycharmProjects/natLangProc1/SunAlsoRises/SunAlsoRises.txt','r')
+hemingwayFile = open(r'/TSAR/SunAlsoRises.txt', 'r')
 with hemingwayFile as f:
     wholeBook= f.read()
 hemingwayFile.close()
