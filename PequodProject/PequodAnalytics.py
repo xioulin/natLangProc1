@@ -1,7 +1,6 @@
 
 import nltk
 import re
-from statistics import mean,stdev,variance,median
 from nltk.tokenize import sent_tokenize, word_tokenize
 
 mobyString = open('/Users/pkc/PycharmProjects/natLangProc1/NLTKbook/mobyDick.txt', 'r')

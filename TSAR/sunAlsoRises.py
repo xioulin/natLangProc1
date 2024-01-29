@@ -12,12 +12,12 @@ from statistics import mean,stdev,variance,median
 #     ssl._create_default_https_context = _create_unverified_https_context
 # response = request.urlopen(url)
 # raw=response.read().decode('utf8')
-hemingwayFile = open(r'/TSAR/SunAlsoRises.txt', 'r')
+hemingwayFile = open(r'SunAlsoRises.txt', 'r')
 with hemingwayFile as f:
     wholeBook= f.read()
 hemingwayFile.close()
 
-from useful_NLP_functions import exclToTextRatio,lexical_density,findWordsLongerThan,word_tokenize,sent_tokenize,filterStopWordsList, filterStopandPunctList, filterPunct_Num_Contractions,returnBasicStatsList, cleanWordTokedSentences,returnBasicWordsPerSentStatsList
+from useful_NLP_functions import exclToTextRatio,lexical_density,findWordsLongerThan,word_tokenize,sent_tokenize,filterStopWordsList, filterStopandPunctList, filterPunct_Num_Contractions,returnBasicStatsList, cleanWordTokedSentences,returnBasicWordsPerSentStatsList, words_per_sentList
 
 fromEpigraph= wholeBook[725:]
 wordTokeTSARList= word_tokenize(fromEpigraph) # the len for this list is 88788
@@ -29,15 +29,10 @@ cleanWordTokeSent= cleanWordTokedSentences(fromEpigraph)
 cleanWorSenToke= cleanWordTokeSent[12:] #the epigraphs are a mess, this is to basically start with the first chapter
 firstPar=cleanWorSenToke[:13]
 
-def words_per_sentList(sentList):
-    wordsPerSentList = []
-    for sent in sentList:
-        wordsPerSentList.append(len(sent))
-    return wordsPerSentList
 
 words_per_sent_LengthList= words_per_sentList(cleanWorSenToke)
 
-returnBasicWordsPerSentStatsList(words_per_sent_LengthList)
+# returnBasicWordsPerSentStatsList(words_per_sent_LengthList)
 # print([i for i in words_per_sent_LengthList if i>80])
 import matplotlib.pyplot as plt
 words_per_sent_LengthList.sort(reverse=True)
