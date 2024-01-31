@@ -1,8 +1,30 @@
+TSAR CHATBOT:
 
 
 
+Classify dialogue:
+-who is talking to whom
+-define class of major characters: i.e. get mentioned frequently
+- define class of dialogue, assign which characters participate when
+- character list
+- defining features: gender, age range?, likes paris?,
 
 
+named entity
+
+Dialogue 1: Jake, Cohn, Frances (end ch1)
+Dialogue 2: Jake, Cohn (entire ch2)
+
+(ch3)
+Dialogue3: Jake, girl who turns out to be Georgette, others
+
+This is a pain, trying to manually identify speakers. better to write a
+program to do the classification, then randomly sample classifications and
+verify if correct. Could randomly sample like 20-30 or so, run stats on it
+on go from there.
+
+this would be part of hte machine learning thing, get the program to classify
+dialogue speakers and then check for accuracy.
 
 
 
