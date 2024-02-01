@@ -12,7 +12,7 @@ from nltk.probability import FreqDist
 from nltk.corpus import wordnet as wn
 nltk.download('wordnet')
 
-mobyDick = open('/Users/pkc/PycharmProjects/natLangProc1/NLTKbook/mobyDick.txt','r')
+mobyDick = open('/PequodProject/mobyDick.txt', 'r')
 mobyDickString = mobyDick.read()
 
 

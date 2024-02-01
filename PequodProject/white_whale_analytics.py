@@ -4,7 +4,7 @@ import re
 from nltk import sent_tokenize,word_tokenize
 from useful_NLP_functions import cleanWordTokedSentences
 
-mobyString = open('/Users/pkc/PycharmProjects/natLangProc1/NLTKbook/mobyDick.txt', 'r')
+mobyString = open('/PequodProject/mobyDick.txt', 'r')
 with mobyString as f:
     lines = f.readlines()
 mobDickString = lines[0]

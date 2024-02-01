@@ -52,9 +52,9 @@ def join_text(list):
 
 # join_text(first250HolyGrail)
 
-fileMobyDick = open(r'/Users/pkc/PycharmProjects/natLangProc1/NLTKbook/mobyDick.txt', 'w')
+fileMobyDick = open(r'/PequodProject/mobyDick.txt', 'w')
 
-fileMD = open('mobyDick.txt','w')
+fileMD = open('../PequodProject/mobyDick.txt', 'w')
 
 mobyDickList=list(text1)
 

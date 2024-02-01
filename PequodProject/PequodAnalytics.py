@@ -3,7 +3,7 @@ import nltk
 import re
 from nltk.tokenize import sent_tokenize, word_tokenize
 
-mobyString = open('/Users/pkc/PycharmProjects/natLangProc1/NLTKbook/mobyDick.txt', 'r')
+mobyString = open('/PequodProject/mobyDick.txt', 'r')
 with mobyString as f:
     lines = f.readlines()
 mobDickString = lines[0]

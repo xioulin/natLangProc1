@@ -1,0 +1,26 @@
+Class ?
+Divide book into chapters, make chapter object
+
+takes in string, finds chapter runs until next chapter?
+Would it work?
+
+
+decompose text into chapters
+
+identify chapters or texts as expository, action drive, dialogue
+
+
+find statistical distribution of POS tags in MD
+
+
+how often is the active voice or passive voice used? stuff like that
+
+
+DO a statistical analysis of POS tag elements in Moby Dick
+
+COmpare to TSAR.
+
+Could then generalize to all sorts of corpora in Gutenberg.
+
+
+
