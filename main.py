@@ -46,7 +46,7 @@ easyCheese = 'easychees234e'
 # makePossAdverbList(wordList)
 
 
-stringerBell = "thou wast all that too me, love for which my sould did pine a green isle in the sea,love"
+stringerBell = "thou wast all that too me, love for which my soul did pine a green isle in the sea,love"
 
 print(stringerBell.index('pine'))
 
