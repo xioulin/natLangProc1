@@ -1,0 +1,22 @@
+TF-IDF in inaugural addresses for "freedom" or for duty or such ideas
+
+what does tf-idf even tell you
+
+
+tf: term frequency: number of times term t shows up in document d
+
+    num_times t shows up / num_times for all words
+
+
+idf: log (tot_num of documents / num of documents containing term t)
+
+so what's the td-idf for
+
+1. slavery
+2. economy
+
+
+
+
+
+
