@@ -26,6 +26,7 @@ on go from there.
 this would be part of hte machine learning thing, get the program to classify
 dialogue speakers and then check for accuracy.
 
-
-
+the NLP text cleansing functions can be turned into some sort of class. That way, I can reuse
+it with all the new text that come in. different documents, such as inaugural speeches or
+The Sun Also Rises book. 
 
