@@ -4,6 +4,11 @@ from nltk.corpus import stopwords
 from collections import Counter
 from statistics import mean,stdev,variance,median
 def lexical_density(entireTextString):
+    """
+    entire a text as string, this function will return the lexical density
+    which is how many words are unique in the string
+
+    """
     wordTokenized= word_tokenize(entireTextString)
     return "The lexical density is "+str(round((len(set(wordTokenized))/len(wordTokenized))*100,2))+'%'
 
