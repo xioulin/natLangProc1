@@ -15,7 +15,6 @@ nltk.download('wordnet')
 mobyDick = open('/PequodProject/mobyDick.txt', 'r')
 mobyDickString = mobyDick.read()
 
-
 wTokeMobD = word_tokenize(mobyDickString)
 
 mobyDickText = nltk.Text(wTokeMobD)

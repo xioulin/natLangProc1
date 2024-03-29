@@ -10,10 +10,7 @@ tf: term frequency: number of times term t shows up in document d
 
 idf: log (tot_num of documents / num of documents containing term t)
 
-so what's the td-idf for
-f
-1. slavery
-2. economy
+
 
 Inaug Address Cosine Similarity:
 
