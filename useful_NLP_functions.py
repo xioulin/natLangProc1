@@ -3,6 +3,18 @@ from nltk import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from collections import Counter
 from statistics import mean,stdev,variance,median
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+def stringToWC(string):
+    string= string.replace('\n','')
+    wc= WordCloud().generate(string)
+    plt.axis('off')
+    plt.imshow(wc,interpolation='bilinear')
+def generate_word_cloud(string):
+    wc= WordCloud.generate(string)
+    plt.axis('off')
+    plt.imshow(wc,interpolation='bilinear')
+
 def lexical_density(entireTextString):
     """
     entire a text as string, this function will return the lexical density
@@ -82,3 +94,7 @@ def words_per_sentList(sentList):
     for sent in sentList:
         wordsPerSentList.append(len(sent))
     return wordsPerSentList
+
+
+
+

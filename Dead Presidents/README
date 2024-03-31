@@ -1,14 +1,11 @@
-TF-IDF in inaugural addresses for "freedom" or for duty or such ideas
-
-what does tf-idf even tell you
+Deepish dive on Presidential Inaugural Addresses
 
 
-tf: term frequency: number of times term t shows up in document d
-
-    num_times t shows up / num_times for all words
+Add some visualizations, like speech bubbles or whatever.
 
 
-idf: log (tot_num of documents / num of documents containing term t)
+
+
 
 
 
