@@ -1,15 +1,3 @@
-body{
-
-}
-
-img{
-    margin: auto;
-    display: block
-}
-table{
-    margin:auto;
-    display: block;
-}
-.button:hover{
-    background-color: blue;
+.selector-for-some-widget {
+  box-sizing: content-box;
 }
