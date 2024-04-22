@@ -1,0 +1,27 @@
+body{
+  background-color: red;
+}
+
+#firsth{
+  font-size: medium;
+  margin:auto;
+  width:fit-content;
+}
+#firsth:hover{
+  color:hotpink;
+}
+#firsth:visited{
+  color:blue;
+}
+h2{
+  width: fit-content;
+  margin: auto;
+  font-size: xx-large;
+  color: black;
+  padding: 1px 5px;
+  background-color: lightgreen;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 10px;
+  border-color: hotpink;
+}
