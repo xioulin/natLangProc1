@@ -3,3 +3,12 @@ I just want to build a frontend interactive dashboard for the Dead Presidents th
 I'm not trying to do much more than that. That's about it.
 
 A dead presidents NLP dashboard.
+
+
+
+turn the wordcloud generator into an object
+
+
+length of words
+
+length of sentences
