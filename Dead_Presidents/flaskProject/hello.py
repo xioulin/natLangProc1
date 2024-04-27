@@ -5,3 +5,8 @@ app=Flask(__name__)
 @app.route('/')
 def sayhello():
     return "<p>hellopeople</p>"
+
+
+
+def fuckyou():
+    return "fuck off"
