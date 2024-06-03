@@ -5,6 +5,9 @@ from collections import Counter
 from statistics import mean,stdev,variance,median
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+
+
+
 def stringToWC(string):
     string= string.replace('\n','')
     wc= WordCloud().generate(string)

@@ -7,6 +7,3 @@ def sayhello():
     return "<p>hellopeople</p>"
 
 
-
-def fuckyou():
-    return "fuck off"
