@@ -6,7 +6,8 @@ from statistics import mean,stdev,variance,median
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-
+def list_of_words_to_string(list_of_words):
+    return ' '.join(list_of_words)
 
 def stringToWC(string):
     string= string.replace('\n','')
