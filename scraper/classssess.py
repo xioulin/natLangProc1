@@ -1,6 +1,22 @@
 import pathlib
 
 from keybert import KeyBERT
+import pathlib
+class DirectoryListDocs():
+    def __init__(self,directory):
+        list_of_docs=[]
+        self.directory = directory
+
+        dire= pathlib.Path(self.directory)
+        for i in dire.iterdir():
+            if i.is_file():
+                file = open(i, 'r')
+                text = file.read()
+                file.close()
+                text = str(text)
+                list_of_docs.append(text)
+
+
 
 
 class PageScraper():

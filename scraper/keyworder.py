@@ -9,6 +9,7 @@ directory = pathlib.Path('pol_russ_econ')
 #         print(i)
 
 model = keybert.KeyBERT('distilbert-base-nli-mean-tokens')
+# iterate through pol_russ_econ directory, read each file, extract keywords with kebert extractor, print them out
 for i in directory.iterdir():
     if i.is_file():
         file= open(i,'r')
