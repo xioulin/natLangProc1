@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup
 import requests
 from classess import MarxTextParser
-url = 'https://www.marxists.org/archive/marx/works/1847/wage-labour/ch08.htm'
+url = 'https://www.marxists.org/subject/anarchism/nechayev/catechism.htm'
 
 res = requests.get(url)
 soup = BeautifulSoup(res.text,'html.parser')
