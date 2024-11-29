@@ -38,7 +38,7 @@ def clean_html(play):
     html = re.findall('<.*?>', play)
     for i in html:
         play = play.replace(i, " ")
-    for i in ['\n', '\r', '\t', '_']:
+    for i in ['\r', '\t', '_']:
         play = play.replace(i, " ")
     xss = re.findall('x.+[1-9]', play)
     for i in xss:
@@ -68,3 +68,31 @@ def get_characters(play):
         # print(f_name,char_d)
         char_dict.update({f_name: char_d})
     return char_dict
+
+def get_play(chap,collected_works,soup):
+    start = re.search(chap, str(soup)).group()
+    end = inc_ch(start)
+    start = "id=\"" + start
+    end = "id=\"" + end
+    start_index = collected_works.index(start)
+    end_index = collected_works.index(end)
+    play = collected_works[start_index:end_index]
+    return play
+
+
+def get_lines(character,play_start):
+    char_lines=re.findall(character+".*?[A-Z]{2}", play_start)
+    final_lines=[]
+    for i in char_lines:
+        final_lines.append(re.sub(character+".",'',i)[:-2].lstrip().rstrip())
+    return final_lines
+
+def find_action(string):
+    return str(re.findall(r"\[.*?\]",string))[2:-2]
+def remove_action(dialogue_list):
+    no_action=[]
+    for i in dialogue_list:
+        i=i.replace(find_action(i),"")
+        i=i.lstrip().rstrip()
+        no_action.append(i)
+    return no_action
