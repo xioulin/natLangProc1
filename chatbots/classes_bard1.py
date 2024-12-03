@@ -38,7 +38,7 @@ def clean_html(play):
     html = re.findall('<.*?>', play)
     for i in html:
         play = play.replace(i, " ")
-    for i in ['\r', '\t', '_']:
+    for i in ['\n','\r', '\t', '_']:
         play = play.replace(i, " ")
     xss = re.findall('x.+[1-9]', play)
     for i in xss:
@@ -96,3 +96,12 @@ def remove_action(dialogue_list):
         i=i.lstrip().rstrip()
         no_action.append(i)
     return no_action
+
+
+class Acts():
+    def __init__(self,play):
+        self.play = play
+        act_list=[]
+
+
+
