@@ -79,13 +79,18 @@ def get_play(chap,collected_works,soup):
     play = collected_works[start_index:end_index]
     return play
 
+def get_line(string):
+    character= re.search(r'[A-Z]{3}.*?\b', string).group()
+    line= re.sub(character+'.', '', string).lstrip().rstrip()
+    return (character, line)
 
-def get_lines(character,play_start):
-    char_lines=re.findall(character+".*?[A-Z]{2}", play_start)
-    final_lines=[]
-    for i in char_lines:
-        final_lines.append(re.sub(character+".",'',i)[:-2].lstrip().rstrip())
-    return final_lines
+#
+# def get_lines(character,play_start):
+#     char_lines=re.findall(character+".*?[A-Z]{2}", play_start)
+#     final_lines=[]
+#     for i in char_lines:
+#         final_lines.append(re.sub(character+".",'',i)[:-2].lstrip().rstrip())
+#     return final_lines
 
 def find_action(string):
     return str(re.findall(r"\[.*?\]",string))[2:-2]
@@ -101,7 +106,49 @@ def remove_action(dialogue_list):
 class Acts():
     def __init__(self,play):
         self.play = play
-        act_list=[]
 
 
+    def return_acts(self):
+        act = "ACT"
+        play=self.play
+        acts = re.findall(act + '...', play)
+        list_of_acts = []
+        for i in range(len(acts)):
+            try:
+                start = acts[i]
+                end = acts[i + 1]
+                s = str(re.escape(start))
+                e = str(re.escape(end))
+                act = re.findall(s + "(.*?)" + e, play)
+            except IndexError:
+                start = acts[i]
+                s = str(re.escape(start))
+                act = re.findall(s + ".*", play)
+            act = act[0]
+            list_of_acts.append(act)
+        return list_of_acts
 
+
+class Scenes():
+    def __init__(self,act):
+        self.act=act
+
+    def return_scenes(self):
+        scene = "SCENE"
+        act=self.act
+        scenes = re.findall(scene + '...', act)
+        list_of_scenes = []
+        for i in range(len(scenes)):
+            try:
+                start = scenes[i]
+                end = scenes[i + 1]
+                s = str(re.escape(start))
+                e = str(re.escape(end))
+                scene = re.findall(s + "(.*?)" + e, act)
+            except IndexError:
+                start = scenes[i]
+                s = str(re.escape(start))
+                scene = re.findall(s + ".*", act)
+            scene = scene[0]
+            list_of_scenes.append(scene)
+        return list_of_scenes
