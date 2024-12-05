@@ -82,7 +82,7 @@ def get_play(chap,collected_works,soup):
 def get_line(string):
     character= re.search(r'[A-Z]{3}.*?\b', string).group()
     line= re.sub(character+'.', '', string).lstrip().rstrip()
-    return (character, line)
+    return character,line
 
 #
 # def get_lines(character,play_start):
@@ -152,3 +152,4 @@ class Scenes():
             scene = scene[0]
             list_of_scenes.append(scene)
         return list_of_scenes
+
