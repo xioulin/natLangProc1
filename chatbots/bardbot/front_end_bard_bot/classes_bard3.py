@@ -70,13 +70,17 @@ def get_characters(play):
     return char_dict
 
 def get_play(chap,collected_works,soup):
+
     start = re.search(chap, str(soup)).group()
-    end = inc_ch(start)
     start = "id=\"" + start
-    end = "id=\"" + end
     start_index = collected_works.index(start)
-    end_index = collected_works.index(end)
-    play = collected_works[start_index:end_index]
+    try:
+        end = inc_ch(start)
+        end = "id=\"" + end
+        end_index = collected_works.index(end)
+        play = collected_works[start_index:end_index]
+    except:
+        play = collected_works[start_index:]
     return play
 
 def get_line(string):
@@ -84,13 +88,7 @@ def get_line(string):
     line= re.sub(character+'.', '', string).lstrip().rstrip()
     return character,line
 
-#
-# def get_lines(character,play_start):
-#     char_lines=re.findall(character+".*?[A-Z]{2}", play_start)
-#     final_lines=[]
-#     for i in char_lines:
-#         final_lines.append(re.sub(character+".",'',i)[:-2].lstrip().rstrip())
-#     return final_lines
+
 
 def find_action(string):
     return str(re.findall(r"\[.*?\]",string))[2:-2]

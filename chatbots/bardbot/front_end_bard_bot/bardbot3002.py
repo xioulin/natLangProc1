@@ -5,7 +5,7 @@ import re
 import pandas as pd
 from bs4 import BeautifulSoup
 
-from classes_bard2 import *
+from classes_bard3 import *
 # -
 
 
