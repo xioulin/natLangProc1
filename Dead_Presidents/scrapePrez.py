@@ -1,3 +1,8 @@
+"""
+script for scraping the presidential portraits from Library of Congress and storing it locally in a directory.
+"""
+
+
 import shutil
 from getPrezName import getPrez
 import requests

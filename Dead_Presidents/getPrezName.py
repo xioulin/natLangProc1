@@ -1,7 +1,15 @@
+"""
+This script pulls the actual presidential portraits from Library of Congress.
+
+"""
+
+
 import re
 
 img_string= '/static/portals/free-to-use/public-domain/presidential-portraits/46-joe-biden.png'
 
+
+#function to return the image of president,
 def getPrez(img_string):
     match=re.search('portraits/.*',img_string)
     match_end= match.group()
